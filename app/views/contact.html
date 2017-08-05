@@ -1,1 +1,36 @@
-<p>This is the contact view.</p>
+<br />
+<div class="jumbotron">
+	<div class="container">
+		<div class="row">
+			<!--<div class="col-md-4">
+				<img src="images/profile.png" />
+			</div>-->
+			<div class="col-md-12 text-left">
+				<div class="row">
+					<form class="form" ng-submit="envoyer()">
+						<div class="col-md-12">
+							<div class="input-group">
+								<span class="input-group-addon" id="nom"><span class="glyphicon glyphicon-user"></span></span>
+								<input type="text" class="form-control" placeholder="Votre nom" ng-model="message.nom" />
+							</div>
+							<br />
+							<div class="input-group">
+								<span class="input-group-addon" id="email"><span class="glyphicon glyphicon-envelope"></span></span>
+								<input type="email" class="form-control" placeholder="Email" ng-model="message.email"/>
+							</div>
+							<br />
+							<div class="input-group">
+								<span class="input-group-addon" id="message"><span class="glyphicon glyphicon-pencil"></span></span>
+								<textarea class="form-control" rows="5" placeholder="Message" ng-model="message.contenu"></textarea>
+							</div>
+							<br />
+							<div class="text-right">
+								<button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Envoyer</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
