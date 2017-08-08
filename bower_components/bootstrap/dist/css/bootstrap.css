@@ -530,9 +530,11 @@ th {
 }
 .glyphicon-chevron-left:before {
   content: "\e079";
+  color: #f00;
 }
 .glyphicon-chevron-right:before {
   content: "\e080";
+  color: #f00;
 }
 .glyphicon-plus-sign:before {
   content: "\e081";
@@ -6407,14 +6409,14 @@ button.close {
   cursor: pointer;
   background-color: #000 \9;
   background-color: rgba(0, 0, 0, 0);
-  border: 1px solid #fff;
+  border: 1px solid #f00;
   border-radius: 10px;
 }
 .carousel-indicators .active {
   width: 12px;
   height: 12px;
   margin: 0;
-  background-color: #fff;
+  background-color: #f00;
 }
 .carousel-caption {
   position: absolute;

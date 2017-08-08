@@ -14,6 +14,7 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <base href="/index.html">
     <!-- endbuild -->
   </head>
   <body ng-app="bdessinateurApp">
@@ -50,6 +51,8 @@
                 </ul>
               </li>
               <li><a href="/metres">Métrés</a></li>
+              <li><a href="/logo">Logo</a></li>
+              <li><a href="/avis">Avis client</a></li>
               <li><a href="/tarifs">Tarifs</a></li>
               <li class="vdivider"><a href="/contact" class="glyphicon glyphicon-envelope"> Contact</a></li>
             </ul>
@@ -102,6 +105,10 @@
         <script src="scripts/controllers/metres.js"></script>
         <script src="scripts/controllers/tarifs.js"></script>
         <script src="scripts/controllers/contact.js"></script>
+        <script src="scripts/controllers/logo.js"></script>
+        <script src="scripts/controllers/avis.js"></script>
+        <script src="scripts/services/serviceajax.js"></script>
+        <script src="scripts/controllers/backoffice.js"></script>
         <!-- endbuild -->
 </body>
 </html>

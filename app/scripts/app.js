@@ -54,10 +54,28 @@ angular
         controller: 'ContactCtrl',
         controllerAs: 'contact'
       })
+      .when('/logo', {
+        templateUrl: 'views/logo.html',
+        controller: 'LogoCtrl',
+        controllerAs: 'logo'
+      })
+      .when('/avis', {
+        templateUrl: 'views/avis.html',
+        controller: 'AvisCtrl',
+        controllerAs: 'avis'
+      })
+      .when('/backoffice', {
+        templateUrl: 'views/backoffice.html',
+        controller: 'BackofficeCtrl',
+        controllerAs: 'backoffice'
+      })
       .otherwise({
         redirectTo: '/'
       });
 
-      $locationProvider.html5Mode(true);
-      $locationProvider.hashPrefix('!');
+      $locationProvider.html5Mode({
+        enabled: true,
+        requireBase: false
+      });
+      $locationProvider.hashPrefix = '!';
   });
