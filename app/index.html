@@ -5,7 +5,7 @@
     <title></title>
     <base href="/" />
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
@@ -17,7 +17,7 @@
     <base href="/index.html">
     <!-- endbuild -->
   </head>
-  <body ng-app="bdessinateurApp">
+  <body ng-app="bdessinateurApp" class="parallax">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -68,6 +68,8 @@
     <div class="footer">
       <div class="container">
         <p class="text-center">Code APE : 7112B Ingénierie, Etudes Techniques</p>
+        <p class="text-center">SIRET : 79137669200012</p>
+        <p class="text-center">Auto Entrepreneur - TVA non applicable, art.293B du CGI<p>
       </div>
     </div>
 
@@ -108,6 +110,7 @@
         <script src="scripts/controllers/logo.js"></script>
         <script src="scripts/controllers/avis.js"></script>
         <script src="scripts/services/serviceajax.js"></script>
+        <script src="scripts/directives/mymodal.js"></script>
         <!-- endbuild -->
 </body>
 </html>

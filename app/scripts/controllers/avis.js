@@ -21,5 +21,17 @@ angular.module('bdessinateurApp')
     	});
     };
 
+    $scope.addAvis = function() {
+      serviceAjax.addAvis($scope.nom, $scope.email, $scope.commentaire, $scope.note);
+      if ($scope.commentaire === null) {
+        $scope.commentaire = '';
+      }
+      if ($scope.note === null) {
+        $scope.note = 0;
+      }
+      $scope.loadAvis();
+      $scope.dismiss();
+    };
+
     $scope.loadAvis();
   });

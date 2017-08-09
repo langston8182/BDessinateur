@@ -28,6 +28,18 @@ app.get('/avis', function(req, res) {
 	});
 });
 
+app.get('/addAvis', function(req, res) {
+	MongoClient.connect(url, function(err, db) {
+		var nom = req.query['nom'];
+		var email = req.query['email'];
+		var commentaire = req.query['commentaire'];
+		var note = req.query['note'];
+		var actif = true;
+		db.collection('avis').insertOne({nom: nom, email: email, message: commentaire, note: note, actif: true});
+		db.close();
+	});
+});
+
 app.listen(3000, function() {
 	console.log("Listening 3000");
 });

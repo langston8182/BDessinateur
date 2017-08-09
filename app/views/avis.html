@@ -1,21 +1,89 @@
 <br />
 <div class="jumbotron">
 	<div class="container">
+		<!-- Ajouter un avis -->
+		<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#avisModal">Ajouter un avis</button>
+
+		<!--Modal -->
+		<div class="modal fade" id="avisModal" role="dialog" my-modal>
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Ajouter un avis</h4>
+					</div>
+					<div class="modal-body">
+						<form ng-submit="addAvis()">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+								<input type="text" ng-model="nom" class="form-control" placeholder="Nom" ng-required="true"/>
+							</div>
+							<br />
+							<div class="input-group">
+								<span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+								<input type="email" ng-model="email" class="form-control" placeholder="Email" ng-required="true"/>
+							</div>
+							<br />
+							<div class="input-group">
+								<span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+								<textarea ng-model="commentaire" class="form-control" rows="5" placeholder="Commentaire"></textarea>
+							</div>
+							<br />
+							Choisissez une note : 
+							<div class="input-group">
+								<span class="input-group-addon"><i class="glyphicon glyphicon-star"></i></span>
+								<select class="form-control" ng-model="note" ng-required="true">
+									<option>0</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+								</select>
+							</div>
+							<br />
+							<button type="submit" class="btn btn-primary" >Valider</button>
+						</form>
+					</div>
+					<div class="modal-footer" >
+						<button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal submit -->
+		<!--<div class="modal fade" id="submitModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="model-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+					<div class="modal-body">
+						Avis ajouté avec succès
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+					</div>
+				</div>
+			</div>
+		</div>-->
+
 		<table class="table table-striped">
 			<thead>
 				<tr>
 					<th>Nom</th>
 					<th>Email</th>
 					<th>Commentaire</th>
-					<th>Note</th>
+					<th>Note / 5</th>
 				</tr>
 			</thead>
 			<tbody>
-				<tr ng-repeat="avisItem in avis" ng-if="avisItem.actif == true">
+				<tr ng-repeat="avisItem in avis | filter : {message : '!!'}" ng-if="avisItem.actif == true">
 					<td>{{avisItem.nom}}</td>
 					<td>{{avisItem.email}}</td>
-					<td>{{avisItem.message}}</td>
-					<td>{{avisItem.note}}</td>
+					<td><span ng-if="avisItem.message != 'undefined'">{{avisItem.message}}</span></td>
+					<td><span ng-if="avisItem.note != 'undefined'">{{avisItem.note}}</span></td>
 				</tr>
 			</tbody>
 		</table>
