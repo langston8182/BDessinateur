@@ -79,7 +79,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr ng-repeat="avisItem in avis | filter : {message : '!!'}" ng-if="avisItem.actif == true">
+				<tr ng-repeat="avisItem in avis" ng-if="avisItem.actif == true">
 					<td>{{avisItem.nom}}</td>
 					<td>{{avisItem.email}}</td>
 					<td><span ng-if="avisItem.message != 'undefined'">{{avisItem.message}}</span></td>
