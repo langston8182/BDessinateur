@@ -64,11 +64,6 @@ angular
         controller: 'AvisCtrl',
         controllerAs: 'avis'
       })
-      .when('/backoffice', {
-        templateUrl: 'views/backoffice.html',
-        controller: 'BackofficeCtrl',
-        controllerAs: 'backoffice'
-      })
       .otherwise({
         redirectTo: '/'
       });

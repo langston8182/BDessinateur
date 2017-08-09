@@ -8,13 +8,10 @@
  * Controller of the bdessinateurApp
  */
 angular.module('bdessinateurApp')
-  .controller('TarifsCtrl', function (serviceAjax) {
+  .controller('TarifsCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
-    serviceAjax.tarifs().then(function(response) {
-    	
-    });
   });

@@ -1,0 +1,23 @@
+<br />
+<div class="jumbotron">
+	<div class="container">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Nom</th>
+					<th>Email</th>
+					<th>Commentaire</th>
+					<th>Note</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="avisItem in avis" ng-if="avisItem.actif == true">
+					<td>{{avisItem.nom}}</td>
+					<td>{{avisItem.email}}</td>
+					<td>{{avisItem.message}}</td>
+					<td>{{avisItem.note}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
