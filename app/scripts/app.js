@@ -64,6 +64,11 @@ angular
         controller: 'AvisCtrl',
         controllerAs: 'avis'
       })
+      .when('/cg', {
+        templateUrl: 'views/cg.html',
+        controller: 'CgCtrl',
+        controllerAs: 'cg'
+      })
       .otherwise({
         redirectTo: '/'
       });
